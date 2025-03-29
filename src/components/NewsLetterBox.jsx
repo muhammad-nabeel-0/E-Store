@@ -3,10 +3,8 @@ import React, { useState } from 'react'
 const NewsLetterBox = () => {
     const handleSubmit = (e)=>{
         const emailData = {
-            email:value,
+        email:value,
         }
-        console.log(emailData);
-        
         e.preventDefault()
         setValue("")
     }
