@@ -2,11 +2,10 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 import { assets } from '../assets/assets'
-import Title from '../components/Title'
 import RelatedProduct from '../components/RelatedProduct'
 const Product = () => {
   const {id} = useParams()
-  const {products,currency} = useContext(ShopContext)
+  const {products,currency,addToCart} = useContext(ShopContext)
   const [productData,setProductData] = useState(false)
   const [image,setImage] = useState("")
   const [select,setSelect] = useState('')
@@ -32,12 +31,12 @@ const Product = () => {
           <div className='w-full sm:w-[19%] overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal flex sm:flex-col '> 
             {
               productData.image.map((item,index)=>(
-                <img onClick={()=>setImage(item)} src={item} className='w-[24%] sm:w-full mb-3 flex-shrink-0 cursor-pointer' key={index} alt="" />
+                <img onClick={()=>setImage(item)} src={item} className='w-[24%] sm:w-full p-1 border-2 mb-3 flex-shrink-0 cursor-pointer' key={index} alt="" />
               ))
             }
           </div>
           <div className='w-full sm:w-[80%]'>
-            <img className='w-full  h-auto' src={image} alt="" />
+            <img className='w-full  h-auto  border-2 p-2' src={image} alt="" />
           </div>
         </div>
         {/* -----------------------------Product info------------------------ */}
@@ -61,7 +60,7 @@ const Product = () => {
               ))}
             </div>
           </div>
-          <button className='bg-black px-8 text-sm active:bg-gray-700 py-3 mt-5 text-white'>ADD TO CART</button>
+          <button onClick={()=> addToCart(productData._id,select)} className='bg-black px-8 text-sm active:bg-gray-700 py-3 mt-5 text-white'>ADD TO CART</button>
           <hr className='mt-8 sm:w-4/5'/>
           <div className='flex flex-col gap-1 text-sm text-gray-400 mt-5'>
             <p>100% Original product.</p>
