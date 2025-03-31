@@ -30,7 +30,7 @@ return (
     </ul>
         <div className='flex items-center gap-6'>
             <NavLink to={"/collection"}>
-        <img onClick={()=>setShowSearch(true)} src={assets.search_icon} alt="" className='w-5 cursor-pointer' />
+        <img onClick={()=>setShowSearch(true)} src={assets.search_icon} alt="" className=' w-5 max-w-5 cursor-pointer' />
             </NavLink>
         <div className='relative group '>
 
