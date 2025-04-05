@@ -28,10 +28,12 @@ const Product = () => {
       <div className='flex gap-12 sm:gap-12 flex-col sm:flex-row'>
         {/* --------------------Product images--------------- */}
         <div className='flex flex-1 flex-col-reverse sm:flex-row gap-3'>
-          <div className='w-full sm:w-[19%] overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal flex sm:flex-col '> 
+          <div className='w-full sm:w-[19%] overflow-x-auto sm:overflow-y-scroll 
+          justify-between sm:justify-normal flex sm:flex-col '> 
             {
               productData.image.map((item,index)=>(
-                <img onClick={()=>setImage(item)} src={item} className='w-[24%] sm:w-full p-1 border-2 mb-3 flex-shrink-0 cursor-pointer' key={index} alt="" />
+                <img onClick={()=>setImage(item)} src={item} 
+                className='w-[24%] sm:w-full p-1 border-2 mb-3 flex-shrink-0 cursor-pointer' key={index} alt="" />
               ))
             }
           </div>
@@ -56,11 +58,14 @@ const Product = () => {
             <p className='text-lg font-light'>Select Size</p>
             <div className='flex gap-2'>
               {productData.sizes.map((item,index)=>(
-                <button onClick={()=>setSelect(item)} className={`border bg-gray-100 px-4 py-2 ${item === select ?"border-orange-500":""}`} key={index}>{item}</button>
+                <button onClick={()=>setSelect(item)} 
+                className={`border bg-gray-100 px-4 py-2 ${item === select ?"border-orange-500":""}`} 
+                key={index}>{item}</button>
               ))}
             </div>
           </div>
-          <button onClick={()=> addToCart(productData._id,select)} className='bg-black px-8 text-sm active:bg-gray-700 py-3 mt-5 text-white'>ADD TO CART</button>
+          <button onClick={()=> addToCart(productData._id,select)} className='bg-black px-8 
+          text-sm active:bg-gray-700 py-3 mt-5 text-white'>ADD TO CART</button>
           <hr className='mt-8 sm:w-4/5'/>
           <div className='flex flex-col gap-1 text-sm text-gray-400 mt-5'>
             <p>100% Original product.</p>
@@ -86,8 +91,6 @@ const Product = () => {
     </div>
   ):<div className='flex items-center justify-center pt-20'>
     <h1 className='text-xl sm:text-4xl text-center'>Product Not Found</h1>
-
   </div>
 }
-
 export default Product

@@ -120,10 +120,8 @@ const Collection = () => {
               <ProductItem key={index} name={items.name} image={items.image} id={items._id} price={items.price}/>
             ))
           }
-
         </div>
       </div>
-
       
     </div>
   )

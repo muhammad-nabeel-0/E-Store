@@ -14,9 +14,8 @@ const RelatedProduct = ({category,subCategory}) => {
             setRelated(productCopy.slice(0,5));
             
         }
-
     },[])
-  return (
+return (
     <div className='my-24'>
         <div className='text-center text-3xl py-2'>
             <Title text1={"RELATED"} text2={"PRODUCTS"}/>
@@ -27,9 +26,8 @@ const RelatedProduct = ({category,subCategory}) => {
                     <ProductItem  key={index}  name={item.name} id={item._id} image={item.image} price={item.price}/>
                 ))
             }
-
         </div>
-      
+    
     </div>
   )
 }

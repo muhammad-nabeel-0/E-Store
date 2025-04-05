@@ -22,7 +22,6 @@ const Cart = () => {
       setCartData(tempData);
       
     }
-
   },[cartItems])
   return (
     <div className='border-t pt-14'>
@@ -62,10 +61,10 @@ const Cart = () => {
         <div className='w-full sm:w-[450px]'>
           <CartTotal/>
           <div className='w-full text-end'>
-          <button onClick={()=> navigate("/place-order")} className='px-8 my-8 text-sm py-3 bg-black text-white'>PROCEED TO CHECKOUT</button>
+          <button onClick={()=> navigate("/place-order")} className='px-8 my-8 text-sm py-3 bg-black text-white'>
+            PROCEED TO CHECKOUT</button>
           </div>
         </div>
-
       </div>
     </div>
   )

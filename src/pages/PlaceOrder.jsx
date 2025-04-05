@@ -16,8 +16,10 @@ const PlaceOrder = () => {
           <Title text1={"DELIVERY "} text2={"INFORMATION"}/>
         </div>
         <div className='flex gap-3'>
-          <input required type="text" name='firstName' className='border border-gray-300 rounded py-1.5 px-3.5 w-full' placeholder='First Name' />
-          <input type="text" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' required placeholder='Last Name' />
+          <input required type="text" name='firstName' className='border border-gray-300 
+          rounded py-1.5 px-3.5 w-full' placeholder='First Name' />
+          <input type="text" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' 
+          required placeholder='Last Name' />
         </div>
         <input type="email" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' required placeholder='Email' />
         <input type="Text" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' required placeholder='Street' />
@@ -26,10 +28,13 @@ const PlaceOrder = () => {
           <input type="text" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' required placeholder='State' />
         </div>
         <div className='flex gap-3'>
-          <input type="number" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' required placeholder='Zipcode' />
-          <input type="text" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' required placeholder='Country' />
+          <input type="number" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' 
+          required placeholder='Zipcode' />
+          <input type="text" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' 
+          required placeholder='Country' />
         </div>
-        <input type="number" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' required placeholder='Phone' />
+        <input type="number" className='border border-gray-300 rounded py-1.5 px-3.5 w-full' 
+        required placeholder='Phone' />
       </div>
       {/* ------------------- Right Side ------------------- */}
       <div className='mt-8'>
@@ -53,7 +58,8 @@ const PlaceOrder = () => {
             </div>
         </div>
         <div className='w-full text-end mt-8'>
-              <button type='submit' onClick={()=> navigate("/orders")} className='bg-black px-16 py-3 text-white text-sm active:bg-gray-800 transition-all'>PLACE ORDER</button>
+              <button type='submit' onClick={()=> navigate("/orders")} 
+              className='bg-black px-16 py-3 text-white text-sm active:bg-gray-800 transition-all'>PLACE ORDER</button>
             </div>
         </div>
         
@@ -61,5 +67,4 @@ const PlaceOrder = () => {
     </div>
   )
 }
-
 export default PlaceOrder

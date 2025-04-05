@@ -21,7 +21,8 @@ a.active hr{
 
 
 @media (max-width:640px) {
-    a.active{
+    
+    .dropIcons a.active{
         background: black;
         color: white;
     }
